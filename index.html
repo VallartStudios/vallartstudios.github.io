@@ -2,7 +2,7 @@
 
 <head>
     <title>Vallart Studios</title>
-	<link rel="icon" href="graphics/favicon-32x32.png" type="image/x-generic" />
+    <link rel="icon" href="graphics/favicon-32x32.png" type="image/x-generic" />
 
     <style>
         * {
@@ -19,15 +19,39 @@
         }
 
         .center-fit {
-            margin:auto;
-            max-height: 30vh;
+            margin: auto;
+            height: 30vh;
             border-radius: 15%;
-            box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
         }
 
         .center-fit-tangames {
             margin: auto;
-            max-height: 22vh;
+            height: 20vh;
+        }
+
+        .footer {
+            display: grid;
+            margin: auto;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-link {
+            text-align: center;
+            margin: 1vw;
+        }
+
+        .footer-icon {
+            max-width: 6vh;
+            border-radius: 25%;
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);;
+        }
+
+        .copyright {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+            color: #363636;
+            text-align: center;
         }
     </style>
 </head>
@@ -36,8 +60,19 @@
     <div class="imgbox">
         <img class="center-fit-tangames" src="graphics/logo_white_512_512.png">
         <a class="center-fit" target="_blank" href="p/missile_attack/">
-            <img class="center-fit" src='p/missile_attack/MIA_icon_512_512.png'>
+            <img class="center-fit" src='p/missile_attack/MIA_icon_512_512.png' />
         </a>
+        <div class="footer">
+            <a class="footer-link" href="https://www.instagram.com/vallartstudios/" target="_blank"><img class="footer-icon"
+                    src='graphics/instagram_icon.png' /></a>
+            <a class="footer-link" href="https://twitter.com/vallartstudios" target="_blank"><img class="footer-icon"
+                    src='graphics/twitter_icon.png' /></a>
+            <a class="footer-link" href="https://www.linkedin.com/company/vallartstudios/" target="_blank"><img class="footer-icon"
+                    src='graphics/linkedin_icon.png' /></a>
+        </div>
+
+        <div class="copyright">Copyright © 2024 Vallart Studios</div>
+
     </div>
 </body>
 
