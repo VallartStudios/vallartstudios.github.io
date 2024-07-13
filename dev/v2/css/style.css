@@ -36,7 +36,7 @@ body {
 	height: 100%;
 	font-family: "Mulish", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	background: #0b0c2a;
+	background: #ffffff;
 }
 
 h1,
@@ -327,11 +327,11 @@ ol {
 -----------------------*/
 
 .header {
-	background: #070720;
+	background: #000000e0;
 }
 
 .header__logo {
-	padding: 20px 0 17px;
+	width: 62px;
 }
 
 .header__logo a {
@@ -1932,7 +1932,7 @@ ol {
 -----------------------*/
 
 .footer {
-	background: #070720;
+	background: #000000e0;
 	padding-top: 60px;
 	padding-bottom: 40px;
 	position: relative;
@@ -2097,7 +2097,7 @@ ol {
 	}
 	.footer__logo {
 		text-align: center;
-		margin-bottom: 20px;
+		margin-bottom: 2000px;
 	}
 	.footer__nav {
 		margin-bottom: 15px;
