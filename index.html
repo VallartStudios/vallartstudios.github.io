@@ -1,90 +1,65 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vallart Studios</title>
-    <link rel="icon" href="graphics/favicon2_32_32.jpg" type="image/x-generic" />
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .imgbox {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgb(255, 255, 255) 50%, rgb(202, 202, 202) 100%);
-            display: grid;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .center-fit {
-            margin: auto;
-            height: 20vh;
-            border-radius: 15%;
-            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
-        }
-
-        .center-fit-vallart {
-            margin: auto;
-            height: 15vh;
-        }
-
-        .footer {
-            display: grid;
-            margin: auto;
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-        .footer-link {
-            margin: 1.25vw;
-            align-items: center;
-            display: flex;
-        }
-
-        .footer-icon {
-            max-width: 6vh;
-            border-radius: 25%;
-            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
-        }
-
-        .copyright {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: medium;
-            color: #363636;
-            text-align: center;
-        }
-    </style>
+    <link rel="icon" href="assets/images/favicon2_32_32.jpg">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <div class="imgbox">
-        <img class="center-fit-vallart" src="graphics/logo2_white_512_512.jpg">
-        <a class="center-fit" target="_blank" href="p/merge_factory/">
-            <img class="center-fit" src='p/merge_factory/MFY_icon_512.jpg' />
-        </a>
-        <a class="center-fit" target="_blank" href="p/missile_attack/">
-            <img class="center-fit" src='p/missile_attack/MIA_icon_512_512.jpg' />
-        </a>
-        <a class="center-fit" target="_blank" href="p/happy_map/">
-            <img class="center-fit" src='p/happy_map/HPM_icon_512_512.jpg' />
-        </a>
-        <div class="footer">
-            <a class="footer-link" href="https://www.tiktok.com/@vallartstudios" target="_blank"><img
-                    class="footer-icon" src='graphics/tiktok.png' /></a>
-            <a class="footer-link" href="https://www.instagram.com/vallartstudios/" target="_blank"><img
-                    class="footer-icon" src='graphics/instagram_icon2.jpg' /></a>
-            <a class="footer-link" href="https://www.youtube.com/channel/UCZveyFxZAtKhOtO2-gJMXxQ" target="_blank"><img
-                    class="footer-icon" src='graphics/youtube.png' /></a>
-            <a class="footer-link" href="https://twitter.com/vallartstudios" target="_blank"><img class="footer-icon"
-                    src='graphics/twitter_icon.jpg' /></a>
-            <a class="footer-link" href="https://www.linkedin.com/company/vallartstudios/" target="_blank"><img
-                    class="footer-icon" src='graphics/linkedin_icon.jpg' /></a>
-        </div>
 
-        <div class="copyright">Copyright © 2024 Vallart Studios</div>
+    <!-- Header with Menu Placeholder -->
+    <header id="menu-container"></header>
 
-    </div>
+    <!-- Home Section (Carousel) -->
+    <main>
+        <section id="home">
+            <h2>Our Games</h2>
+            <div class="carousel">
+                <!-- Clickable Game Cards -->
+                <div class="game-card">
+                    <a target="_blank" href="p/merge_factory/">
+                        <img src="p/merge_factory/MFY_icon_512.jpg" alt="Merge Factory Icon">
+                    </a>
+                    <h3>Merge Factory</h3>
+                    <p>Downloads: 100+</p>
+                    <p >Ratings:<span style="color: red; font-weight: bold;"> NEW!</span></p>
+                </div>
+                <div class="game-card">
+                    <a target="_blank" href="p/missile_attack/">
+                        <img src="p/missile_attack/MIA_icon_512_512.jpg" alt="Missile Attack Icon">
+                    </a>
+                    <h3>Missile Attack</h3>
+                    <p>Downloads: 1K+</p>
+                    <p>Ratings: ★★★★☆</p>
+                </div>
+                <div class="game-card">
+                    <a target="_blank" href="p/happy_map/">
+                        <img src="p/happy_map/HPM_icon_512_512.jpg" alt="Happy Map Icon">
+                    </a>
+                    <h3>Happy Map</h3>
+                    <p>Downloads: 500+</p>
+                    <p>Ratings: ★★★★★</p>
+                </div>
+                <div class="game-card">
+                    <img style="background-color: rgb(63, 63, 63);" src="assets/images/lock.png" alt="Coming Soon Icon">
+                    <h3>Coming Soon!</h3>
+                    <p>Downloads: -</p>
+                    <p>Ratings: -</p>
+                </div>
+                <!-- Add more game cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-container"></footer>
+
+    <script src="js/menuLoader.js"></script>
+    <script src="js/footerLoader.js"></script>
 </body>
 
 </html>
