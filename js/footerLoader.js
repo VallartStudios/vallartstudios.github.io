@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inline the footer HTML directly
     const footerHTML = `
         <div>
-            <p>&copy; 2024 Vallart Studios. All Rights Reserved.</p>
+            <p>&copy; 2025 Vallart Studios. All Rights Reserved.</p>
             <div class="social-links">
                 <a target="_blank" href="https://www.tiktok.com/@vallartstudios">Tiktok</a>
                 <a target="_blank" href="https://www.facebook.com/vallartstudios/">Facebook</a>
