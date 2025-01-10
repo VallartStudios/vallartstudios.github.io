@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuHTML = `
         <div class="header-content">
             <div class="logo">
-                <img src="assets/images/logo2_white_512_512.jpg" alt="Company Logo">
-            </div>
-            <h1>Vallart Studios</h1>
+                <a href="index.html"> <img src="assets/images/logo2_white_512_512.jpg" alt="Company Logo"/></a>
+            </div>            
             <nav>
                 <ul>
-                    <!--<li><a href="index.html">Home</a></li>-->
+                    <li><a href="index.html">Games</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>

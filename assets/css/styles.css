@@ -22,8 +22,8 @@ header
 {
     /* inner content */
     display: flex;
-    justify-content: center;
     padding: 20px;
+    justify-content: center;
     background-color: #ffffff;
     border-bottom: 1px solid #eaeaea;
     /* fixed to top */
@@ -36,12 +36,42 @@ header
 {
     display: flex;
     align-items: center;
+    max-width: 1300px;
     gap: 20px;
 }
 
 .logo img
 {
     height: 70px;
+}
+
+/* Navigation */
+nav
+{
+    margin-left: auto;
+}
+
+ul
+{
+    list-style: none;
+    display: flex;
+}
+
+li
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+    text-align: center;
+    height: 40px;
+}
+
+li a
+{
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 
 /* Main Section Titles */
@@ -173,10 +203,15 @@ h2
 /* About Section */
 #about
 {
-    padding: 50px 0;
+    /* inner content */
+    padding: 20px 20px;
+    align-items: center;
+    /* Adjust to fit between header and footer */
+    overflow: auto;
+    width: 100%;
+    max-width: 1300px;
+    background-color: aqua;
     text-align: center;
-    width: 90%;
-    max-width: 1200px;
 }
 
 .team
@@ -224,10 +259,12 @@ h2
 /* Contact Section */
 #contact
 {
-    padding: 50px 0;
-    text-align: center;
-    width: 90%;
-    max-width: 1200px;
+    /* inner content */
+    padding: 20px 20px;
+    align-items: center;
+    /* Adjust to fit between header and footer */
+    overflow: auto;
+    width: 100%;
 }
 
 form
@@ -268,16 +305,16 @@ form button
     padding: 12px;
     font-size: 1rem;
     color: #fff;
-    background-color: #6200ea;
+    background-color: #15e696;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 form button:hover
 {
-    background-color: #5a00d1;
+    background-color: #17c582;
+
 }
 
 /* Footer */
