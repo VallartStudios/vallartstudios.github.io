@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vallart Studios</title>
-    <link rel="icon" href="assets/images/favicon2_32_32.jpg">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Vallart Studios - Mobile Gaming</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon2_32_32.png" type="image/png">
 </head>
-
 <body>
+    <header>
+        <div class="container">
+            <img src="assets/images/logo2_white_512_512.jpg" alt="Vallart Studios Logo" class="logo">
+            <h1>Vallart Studios</h1>
+        </div>
+    </header>
 
-    <!-- Header with Menu Placeholder -->
-    <header id="menu-container"></header>
-
-    <!-- Home Section (Carousel) -->
     <main>
-        <section id="home">
-            <h2>Games</h2>
-            <div class="carousel">
-                <!-- Clickable Game Cards -->
-                <div class="game-card">
-                    <a target="_blank" href="p/luggage_quest/">
-                        <img src="p/luggage_quest/LUQ_icon_512.jpg" alt="Luggage Quest Icon">
-                    </a>
-                    <h3>Luggage Quest</h3>
-                    <p>Puzzle</p>
+        <section id="hero">
+            <div class="container">
+                <h2>Crafting Fun, One Tap at a Time.</h2>
+                <p>We are Vallart Studios, an indie mobile game development studio passionate about creating engaging and innovative gaming experiences.</p>
+            </div>
+        </section>
+
+        <section id="our-games">
+            <div class="container">
+                <h2>Our Games</h2>
+                <div class="games-grid" id="games-grid">
+                    <!-- Games will be dynamically loaded here by JavaScript -->
                 </div>
-                <div class="game-card">
-                   <a target="_blank" href="p/missile_master/">
-                       <img src="p/missile_master/MIM_icon_512.jpg" alt="Missile Master 3D Icon">
-                   </a>
-                   <h3>Missile Master 3D</h3>
-                   <p>Action</p>
-               </div>
-                <div class="game-card">
-                    <a target="_blank" href="p/merge_factory/">
-                        <img src="p/merge_factory/MFY_icon_512.jpg" alt="Merge Factory Icon">
-                    </a>
-                    <h3>Merge Factory</h3>
-                    <p>Puzzle</p>
+            </div>
+        </section>
+
+        <section id="about-us">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Founded with a vision to bring unique and enjoyable games to players worldwide, Vallart Studios focuses on quality, creativity, and player satisfaction. Our small, dedicated team pours heart and soul into every pixel and line of code.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Follow us on our journey or reach out for collaborations!</p>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@vallartstudios" class="social-icon">TK</a>
+                    <a href="https://www.facebook.com/vallartstudios/" class="social-icon">FB</a>
+                    <a href="https://www.instagram.com/vallartstudios/" class="social-icon">IG</a>
+                    <a href="https://twitter.com/vallartstudios" class="social-icon">X</a>
+                    <a href="https://www.linkedin.com/company/vallartstudios/" class="social-icon">LK</a>
+                    <a href="https://www.youtube.com/@vallartstudios" class="social-icon">YT</a>
                 </div>
-                <div class="game-card">
-                    <a target="_blank" href="p/missile_attack/">
-                        <img src="p/missile_attack/MIA_icon_512_512.jpg" alt="Missile Attack Icon">
-                    </a>
-                    <h3>Missile Attack</h3>
-                    <p>Action</p>
-                </div>
-                <div class="game-card">
-                    <a target="_blank" href="p/happy_map/">
-                        <img src="p/happy_map/HPM_icon_512_512.jpg" alt="Happy Map Icon">
-                    </a>
-                    <h3>Happy Map</h3>
-                    <p>Puzzle</p>
-                </div>
-                <div class="game-card">
-                    <img style="background-color: rgb(63, 63, 63);" src="assets/images/lock.png" alt="Coming Soon Icon">
-                    <h3>Coming Soon!</h3>
-                    <p>Action</p>
-                </div>
-                <!-- Add more game cards as needed -->
+                <p>Email: <a href="mailto:contact@vallartstudios.com">contact@vallartstudios.com</a></p>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="footer-container"></footer>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Vallart Studios. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <script src="js/menuLoader.js"></script>
-    <script src="js/footerLoader.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
