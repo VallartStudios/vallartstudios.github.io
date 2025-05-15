@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Missile Attack",
             genre: "Action / Simulation",
             image: "assets/images/MIA_icon_512.jpg",
-            url: "https://play.google.com/store/apps/details?id=com.vallartstudios.missileattack" 
+            url: "https://play.google.com/store/apps/details?id=com.VallartStudios.MissileAttack" 
         },
         {
             title: "Happy Map",
