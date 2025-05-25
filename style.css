@@ -56,7 +56,7 @@ header .logo {
 header h1 {
     color: var(--dark-color);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     /* text-align: left; /* Ensures title text aligns left if it wraps, default for h1 */
 }
 
@@ -109,8 +109,8 @@ section h2::after {
 /* Games Grid */
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr); /* This will create 3 equal-width columns */
+    gap: 3rem;
     margin-top: 2rem;
 }
 
@@ -228,7 +228,7 @@ footer {
     /* For header .container, flex properties will still apply.
        If you want them to stack sooner, you'd add flex-direction: column here. */
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     header .logo {
         width: 80px;
@@ -244,22 +244,64 @@ footer {
     }
     .games-grid {
         grid-template-columns: 1fr; /* Stack cards on smaller screens */
+        margin-top: 1rem;
+        row-gap: 1rem; /* Adjust row gap for smaller screens */
+    }
+
+    /* Game card layout for smaller screens */
+    .game-card {
+        display: flex; /* Arrange logo and info side-by-side */
+        align-items: center; /* Vertically align items in the center */
+        padding: 1rem; /* Padding inside the card */
+        border-radius: 15px; /* Adjusted border-radius for row layout */
+        /* text-align: left; /* Children are block, will align left by default */
+    }
+
+    .game-card:hover {
+        transform: translateY(-3px); /* More subtle hover for rows */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.12); /* Adjusted hover shadow */
+    }
+
+    .game-card img.game-logo {
+        width: 70px; /* Fixed width for the logo */
+        height: 70px; /* Fixed height for the logo */
+        object-fit: cover;
+        border-radius: 15px; /* Rounded corners for the logo */
+        margin-right: 1rem; /* Space between logo and text info */
+        border-bottom: none; /* Remove desktop-specific border */
+        flex-shrink: 0; /* Prevent logo from shrinking */
+        /* aspect-ratio: 1 / 1; is maintained by width/height */
+        /* display: block; is not needed due to flex parent */
+    }
+
+    .game-card .game-info {
+        padding: 0; /* Remove original padding, card has its own now */
+        flex-grow: 1; /* Allow info to take remaining space */
+    }
+
+    .game-card h3 {
+        font-size: 1.2rem; /* Adjust font size for smaller layout */
+        margin-bottom: 0.25rem; /* Tighter spacing below title */
+    }
+
+    .game-card p.game-genre {
+        font-size: 0.8rem; /* Adjust font size for genre */
+        margin-bottom: 0; /* No margin if it's the last item in game-info */
+    }
+
+    .game-card a.game-link {
+        display: none; /* Hide the "View Game" button on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    /* Stack logo and title on very small screens */
-    header .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally in the column */
-    }
     header .logo {
         width: 70px;
         margin-right: 0; /* Remove right margin when stacked */
         margin-bottom: 0.5rem; /* Add bottom margin for spacing when stacked */
     }
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         text-align: center; /* Ensure title is centered when stacked */
     }
     section {

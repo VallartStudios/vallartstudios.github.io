@@ -73,6 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="${game.url}" class="game-link" target="_blank" rel="noopener noreferrer">View Game</a>
                 </div>
             `;
+            
+            // Make the whole card clickable if URL exists and is not '#'
+            if (game.url && game.url !== "#") {
+                gameCard.style.cursor = 'pointer'; // Indicate it's clickable
+                gameCard.addEventListener('click', (event) => {
+                    // If the click target is the game-link itself or inside it, let the link handle it.
+                    // This prevents double navigation when the link is visible (e.g., on desktop).
+                    if (event.target.closest('.game-link')) {
+                        return;
+                    }
+                    window.open(game.url, '_blank', 'noopener,noreferrer');
+                });
+            }
             gamesGrid.appendChild(gameCard);
         });
     }
