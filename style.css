@@ -86,23 +86,72 @@ section h2::after {
 
 
 #hero {
-    background-color: var(--light-color);
-    padding: 5rem 0;
+    background-color: var(--dark-color); /* Fallback if video doesn't load */
+    position: relative; /* To position video background and overlay */
+    overflow: hidden; /* To clip the video if it's larger */
+    width: 100%;
+    min-height: 40.25vw; /* 16:9 aspect ratio */
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.hero-video-background {
+    position: absolute;
+    top: -8vw;
+	width: 300%;
+    height: 56.25vw; /* Maintain 16:9 aspect ratio */
+    left: -100%;
+    z-index: 1; /* Behind overlay and content */
+}
+
+.hero-video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to content */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust darkness/opacity as needed */
+    z-index: 2; /* Above video, below content */
+}
+
+#hero .container {
+    position: relative; /* Ensure content is above video and overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    z-index: 3;
 }
 
 #hero h2 {
     font-size: 2.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    color: var(--white-color); /* Changed for readability over video */
+    margin-bottom: 0;
 }
 #hero h2::after { /* No underline for hero title */
     display: none;
 }
 
 #hero p {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    max-width: 600px;
+    font-size: 1.3rem;
+    color: var(--white-color); /* Changed for readability over video */
+    max-width: 80vw;
     margin: 0 auto;
 }
 
@@ -236,11 +285,18 @@ footer {
     section h2 {
         font-size: 1.8rem;
     }
+    #hero {
+        min-height: 56.25vw; /* Adjusted for smaller screens */
+    }
+    .hero-video-background {
+        top: 0;
+    }
     #hero h2 {
         font-size: 2.2rem;
     }
     #hero p {
         font-size: 1rem;
+        max-width: 950vw;
     }
     .games-grid {
         grid-template-columns: 1fr; /* Stack cards on smaller screens */
@@ -306,5 +362,8 @@ footer {
     }
     section {
         padding: 3rem 0;
+    }
+    #hero h2 {
+        font-size: 1.8rem;
     }
 }
