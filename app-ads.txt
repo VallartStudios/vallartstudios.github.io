@@ -7,6 +7,8 @@ facebook.com, 3806803532981906, RESELLER, c3e20eee3f780d68
 facebook.com, 1098529631728145, RESELLER, c3e20eee3f780d68
 # Luggage Quest
 facebook.com, 1341254607223917, RESELLER, c3e20eee3f780d68
+# Spawn Battle
+facebook.com, 4126582864243325, RESELLER, c3e20eee3f780d68
 
 # Admob (Vallart)
 google.com, pub-8086057940960912, DIRECT, f08c47fec0942fa0
