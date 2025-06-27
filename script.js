@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //    - url: Link to the game's store page or website (e.g., 'https://appstore.com/yourgame'). Use '#' if no link yet.
     const gamesData = [
         {
+            title: "Spawn Battle",
+            genre: "Action / Combat",
+            image: "assets/images/SPB_icon_512.jpg",
+            url: "https://play.google.com/store/apps/details?id=com.vallartstudios.spawnbattle" 
+        },
+        {
             title: "Luggage Quest",
             genre: "Puzzle / Reflexion",
             image: "assets/images/LUQ_icon_512.jpg",
