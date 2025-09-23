@@ -87,7 +87,7 @@ section h2::after {
 
 
 #hero {
-    background-color: var(--dark-color); /* Fallback if video doesn't load */
+    background-color: #00000000; /* Fallback if video doesn't load */
     position: relative; /* To position video background and overlay */
     overflow: hidden; /* To clip the video if it's larger */
     width: 100%;
@@ -123,6 +123,16 @@ section h2::after {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust darkness/opacity as needed */
     z-index: 2; /* Above video, below content */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust darkness/opacity as needed */
+    z-index: 0;
 }
 
 #hero .container {
