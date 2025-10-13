@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Bubbles War",
             genre: "Action / Arcade",
             image: "assets/images/BLW_icon_512.jpg",
-            url: "https://play.google.com/store/apps/details?id=com.vallartstudios.spawnbattle" 
+            url: "https://play.google.com/store/apps/details?id=com.vallartstudios.bubbleswar" 
         },
         {
             title: "Spawn Battle",
