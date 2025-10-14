@@ -1,4 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Navigation Header Scroll Effect ---
+    const header = document.querySelector('header');
+    
+    function handleScroll() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Call once on load to set initial state
+    handleScroll();
+
+    // --- Mobile Navigation ---
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when a nav link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+
     // --- Game Data ---
     // To add a new game:
     // 1. Add its image to the 'assets/images/' folder.
@@ -43,18 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
             genre: "Action / Simulation",
             image: "assets/images/MIA_icon_512.jpg",
             url: "https://play.google.com/store/apps/details?id=com.VallartStudios.MissileAttack" 
-        },
-        {
-            title: "Happy Map",
-            genre: "Puzzle / Reflexion",
-            image: "assets/images/HPM_icon_512.jpg",
-            url: "https://play.google.com/store/apps/details?id=ts.tangames.happymap" 
-        },
-        {
-            title: "Coming Soon",
-            genre: "Action / Combat",
-            image: "assets/images/lock.jpg",
-            url: "#" 
         },
     ]
 
