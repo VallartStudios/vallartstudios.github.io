@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
             navMenu.classList.remove('active');
+            
+            // Put focus back to body to remove focus from navigation
+            document.body.focus();
         });
     });
 
