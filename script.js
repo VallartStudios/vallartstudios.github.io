@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             url: "https://play.google.com/store/apps/details?id=com.vallartstudios.luggagequest" 
         },
         {
-            title: "Missile Master 3D",
+            title: "Missile War",
             genre: "Action / Simulation",
             image: "assets/images/MIM_icon_512.jpg",
             url: "https://play.google.com/store/apps/details?id=com.vallartstudios.missilemaster3d" 
